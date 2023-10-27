@@ -141,7 +141,7 @@ def _asphericity_iteration(xk, l, m, p, A, a, B, b, verbose=0, solver='GLPK'):
     a_LP.set_objective(z[0])
 
     if (verbose):
-        print '**** Solve LP ****'
+        print('**** Solve LP ****')
         a_LP.show()
 
     opt_val = a_LP.solve()
@@ -150,13 +150,13 @@ def _asphericity_iteration(xk, l, m, p, A, a, B, b, verbose=0, solver='GLPK'):
     z_opt = a_LP.get_values(z)
 
     if (verbose):
-        print 'Objective Value:', opt_val
+        print('Objective Value:', opt_val)
         for i, v in x_opt.iteritems():
-            print 'x_%s = %f' % (i, v)
+            print('x_%s = %f' % (i, v))
 
         for i, v in z_opt.iteritems():
-            print 'z = %f' % (v)
-        print '\n'
+            print('z = %f' % (v))
+        print('\n')
 
     return [opt_val, x_opt, z_opt]
 
