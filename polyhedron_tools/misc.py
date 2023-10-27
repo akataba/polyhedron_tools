@@ -485,7 +485,7 @@ def support_function(P, d, verbose = 0, return_xopt = False, solver = 'GLPK'):
     s_LP.add_constraint(A * x <= b);
 
     if (verbose):
-        print '**** Solve LP  ****'
+        print('**** Solve LP  ****')
         s_LP.show()
 
     oval = s_LP.solve()
@@ -494,8 +494,8 @@ def support_function(P, d, verbose = 0, return_xopt = False, solver = 'GLPK'):
     if (verbose):
         print 'Objective Value:', oval
         for i, v in xopt.iteritems():
-            print 'x_%s = %f' % (i, v)
-        print '\n'
+            print('x_%s = %f' % (i, v))
+        print('\n')
 
     if (return_xopt == True):
         return oval, xopt
