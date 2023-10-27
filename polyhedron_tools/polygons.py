@@ -275,7 +275,7 @@ def simplification_edge_prunning(X, E, XE=None, verbose=True):
     Xnew = Polyhedron(ieqs = Xnew_ieqs)
 
     if verbose:
-        print '\ninitial number of edges = ', len(X.inequalities_list())
-        print 'final number of edges = ', len(Xnew_ieqs)
+        print('\ninitial number of edges = ', len(X.inequalities_list()))
+        print('final number of edges = ', len(Xnew_ieqs))
 
     return Xnew   
