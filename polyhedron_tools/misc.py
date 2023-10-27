@@ -492,7 +492,7 @@ def support_function(P, d, verbose = 0, return_xopt = False, solver = 'GLPK'):
     xopt = s_LP.get_values(x);
 
     if (verbose):
-        print 'Objective Value:', oval
+        print('Objective Value:', oval)
         for i, v in xopt.iteritems():
             print('x_%s = %f' % (i, v))
         print('\n')
